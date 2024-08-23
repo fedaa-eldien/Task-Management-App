@@ -1,133 +1,25 @@
-html {
-  background-color: #282828;
-  font-family: sans-serif;
+html{background-color:#282828;font-family:sans-serif}
+:root{--main-color:black}
+.creatTask{display:flex;gap:18px;flex-wrap:wrap;max-width:550px;margin:50px auto 0;padding:28px 30px;background-color:#ffffff1a;border-radius:12px;border:var(--main-color) solid 3px;-webkit-border-radius:12px;-moz-border-radius:12px;-ms-border-radius:12px;-o-border-radius:12px}
+.creatTask input{font-size:18px;padding:12px;border:none;border-radius:30px}
+.creatTask input[type=text]{flex:1;outline:0;border:var(--main-color) solid 3px}
+.creatTask input[type=submit]{background-color:var(--main-color);color:#fff;outline:0;cursor:pointer}
+@media (max-width:449px){
+.creatTask{gap:0;padding:20px;background-color:#ffffff1a}
+.creatTask input{width:100%;border-radius:0}
+.creatTask input[type=text]{border:none}
 }
-:root {
-  --main-color: black;
+.tasks{max-width:540px;padding:20px 40px;margin:50px auto;background-color:#ffffff1a;border-radius:12px;border-top:var(--main-color) 4px solid;position:relative;-webkit-border-radius:12px;-moz-border-radius:12px;-ms-border-radius:12px;-o-border-radius:12px}
+@media (max-width:449px){
+.tasks{padding:20px 10px;background-color:#ffffff1a}
 }
-.creatTask {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-  max-width: 550px;
-  margin: 50px auto 0;
-  padding: 28px 30px;
-  background-color: #ffffff1a;
-  border-radius: 12px;
-  border: var(--main-color) solid 3px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
+.task{font-size:22px;padding:12px 16px;margin:20px auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;background-color:#fff;border-radius:6px;overflow:hidden}
+.task button{border:none;border-radius:6px;background-color:var(--main-color);color:#fff;padding:6px;font-size:16px;margin-left:auto}
+@media (max-width:449px){
+.task{font-size:18px;padding:10px}
 }
-.creatTask input {
-  font-size: 18px;
-  padding: 12px;
-  border: none;
-  border-radius: 30px;
-}
-.creatTask input[type='text'] {
-  flex: 1;
-  outline: none;
-  border: var(--main-color) solid 3px;
-}
-
-.creatTask input[type='submit'] {
-  background-color: var(--main-color);
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-}
-
-@media (max-width: 449px) {
-  .creatTask {
-    gap: 0;
-    padding: 20px;
-    background-color: #ffffff1a;
-  }
-  .creatTask input {
-    width: 100%;
-    border-radius: 0;
-  }
-  .creatTask input[type='text'] {
-    border: none;
-  }
-}
-
-.tasks {
-  max-width: 540px;
-  padding: 20px 40px;
-  margin: 50px auto;
-  background-color: #ffffff1a;
-  border-radius: 12px;
-  border-top: var(--main-color) 4px solid;
-  position: relative;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-}
-@media (max-width: 449px) {
-  .tasks {
-    padding: 20px 10px;
-    background-color: #ffffff1a;
-  }
-}
-.task {
-  font-size: 22px;
-  padding: 12px 16px;
-  margin: 20px auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background-color: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.task button {
-  border: none;
-  border-radius: 6px;
-  background-color: var(--main-color);
-  color: #fff;
-  padding: 6px;
-  font-size: 16px;
-  margin-left: auto;
-}
-@media (max-width: 449px) {
-  .task {
-    font-size: 18px;
-    padding: 10px;
-  }
-}
-
-.clear {
-  border: none;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 6px;
-  top: 6px;
-  border-radius: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #282828;
-}
-.clear:hover {
-  background-color: red;
-}
-.clear::before,
-.clear::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 12px;
-  background-color: #fff;
-}
-.clear::before {
-  transform: rotate(45deg);
-}
-.clear::after {
-  transform: rotate(-45deg);
-}
+.clear{border:none;width:20px;height:20px;position:absolute;right:6px;top:6px;border-radius:25%;display:flex;align-items:center;justify-content:center;background-color:#282828}
+.clear:hover{background-color:red}
+.clear::after,.clear::before{content:'';position:absolute;width:2px;height:12px;background-color:#fff}
+.clear::before{transform:rotate(45deg)}
+.clear::after{transform:rotate(-45deg)}
